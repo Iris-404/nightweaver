@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Nightweaver</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --text: #ccc;
+      --accent: #a3a3a3;
+      --highlight: #9f9f9f;
+      --font: 'Crimson Text', serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5rem 1rem 3rem;
+      background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    header img {
+      width: 100px;
+      margin-bottom: 1.5rem;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: white;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+      border-bottom: 2px solid var(--highlight);
+      display: inline-block;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      padding: 4rem 2rem;
+      animation: fadeInUp 1.2s ease-out both;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text-block {
+      max-width: 500px;
+      flex: 1;
+    }
+
+    .image-block {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-img, .suit-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-img:hover, .suit-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--accent);
+      padding: 2rem 1rem;
+      border-top: 1px solid #222;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="nightweaver-logo.png" alt="The Nightweaver logo">
+    <h1>The Nightweaver</h1>
+    <p><em>From the shadows, I weave justice.</em></p>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="text-block">
+        <h2>Origin</h2>
+        <p>Leo, a quiet biology student with a deep connection to nature, was transformed by a genetically enhanced spider bite. Now, as The Nightweaver, he moves silently through the night, sensing danger through invisible threads.</p>
+      </div>
+      <div class="image-block">
+        <img class="profile-img" src="Leo.jpg" alt="Leo">
+      </div>
+    </section>
+
+    <section class="section reverse">
+      <div class="text-block">
+        <h2>Powers & Suit</h2>
+        <p>Using his <strong>Webconnectie</strong>, The Nightweaver detects movement and vibrations through ultra-thin sensory threads. His suit, known as <em>The Lurker</em>, is lightweight, silent, and lined with reflective web patterns only visible at certain angles.</p>
+      </div>
+      <div class="image-block">
+        <img class="suit-img" src="Nightweaver.jpg" alt="The Nightweaver Suit">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="text-block">
+        <h2>Nemesis: Vexon</h2>
+        <p>Dr. Mila Vreugde, aka <strong>Vexon</strong>, manipulates sensory chaos through sound and light to disorient her enemies. She thrives in disorder — the perfect foil to Nightweaver’s calm precision.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 The Nightweaver | All rights reserved.
+  </footer>
+</body>
+</html>
